@@ -8,6 +8,8 @@ SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
 FPS=60
 NUMBER_FONT = pygame.font.SysFont('lucidasans',35)
 TOTAL_FONT = pygame.font.SysFont('malgungothic',38)
+BUTTON_FONT = pygame.font.SysFont('lucidasans', 18, bold=True)
+TITLE_FONT = pygame.font.SysFont('malgungothic', 30, bold=True)
 
 
 def draw_screen(dices, buttons, roll_button, total_str):
@@ -17,12 +19,18 @@ def draw_screen(dices, buttons, roll_button, total_str):
             die.update(SCREEN, NUMBER_FONT)
     pygame.draw.rect(SCREEN, (0,255,0), pygame.Rect(100, 50, 600, 450),  2)   
 
-    for button in buttons:
-        pygame.draw.rect(SCREEN, (255,255,100), button) 
+    for i in range(len(buttons)):
+        pygame.draw.rect(SCREEN, (255,255,100), buttons[i])
+        if i==5:
+            SCREEN.blit(BUTTON_FONT.render(str(20), 1,(0,0,0)),(117 + (60*i), 538))
+        else:
+            SCREEN.blit(BUTTON_FONT.render(str(2*i+4), 1,(0,0,0)),(117 + (60*i), 538))
 
     draw_total_text = TOTAL_FONT.render('Total: '+ str(total_str), 1,(0,0,0))
     SCREEN.blit(draw_total_text, ((68*7), 525))
     pygame.draw.rect(SCREEN, (255,255,100), roll_button) 
+    SCREEN.blit(BUTTON_FONT.render('Roll', 1,(0,0,0)),(120 + (80*7), 538))
+    SCREEN.blit(TITLE_FONT.render('Roll The Dice', 1,(0,0,0)),(300, 10))
     pygame.display.update()
 
 def main():
