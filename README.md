@@ -1,6 +1,6 @@
 # Roll-the-Dice
 
-Roll the Dice is a GUI done with pygame for play with dice, you can add up to 16 dice on the board from 4 to 20 faces, roll it and see accumulate number.
+Roll the Dice is a GUI done with pygame for play with dice, you can add up to 16 dice on the board from 4 to 20 faces, roll and see accumulate number.
 ## How to use it?
 
 * Select new die with the number of faces buttons
