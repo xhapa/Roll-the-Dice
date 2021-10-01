@@ -8,7 +8,5 @@ Roll the Dice is a GUI for play with dice, you can add up to 16 dice on the boar
 * You can delete a die click on it
 * Finally click Roll and see who gets the best result!!
 
-<img src="https://i.imgur.com/VqG7Czg.png" width="300" height="250" /> 
-<img src="https://i.imgur.com/oksISum.png" width="300" height="250" />
-<img src="https://i.imgur.com/HykJCRo.png" width="300" height="250" />
-<img src="https://i.imgur.com/fNMAb3A.png" width="300" height="250" />
+<img  src="https://i.imgur.com/VqG7Czg.png" width="250" height="200" /> <img src="https://i.imgur.com/oksISum.png" width="250" height="200" />
+<img src="https://i.imgur.com/HykJCRo.png" width="250" height="200" /> <img src="https://i.imgur.com/fNMAb3A.png" width="250" height="200" />
