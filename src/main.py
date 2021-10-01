@@ -20,7 +20,7 @@ def draw_screen(dices, buttons, roll_button, total_str):
     pygame.draw.rect(SCREEN, (0,255,0), pygame.Rect(100, 50, 600, 450),  2)   
 
     for i in range(len(buttons)):
-        pygame.draw.rect(SCREEN, (255,255,100), buttons[i])
+        pygame.draw.rect(SCREEN, (255,255,100), buttons[i], border_radius=10)
         if i==5:
             SCREEN.blit(BUTTON_FONT.render(str(20), 1,(0,0,0)),(117 + (60*i), 538))
         else:
@@ -28,7 +28,7 @@ def draw_screen(dices, buttons, roll_button, total_str):
 
     draw_total_text = TOTAL_FONT.render('Total: '+ str(total_str), 1,(0,0,0))
     SCREEN.blit(draw_total_text, ((68*7), 525))
-    pygame.draw.rect(SCREEN, (255,255,100), roll_button) 
+    pygame.draw.rect(SCREEN, (255,255,100), roll_button, border_radius=10) 
     SCREEN.blit(BUTTON_FONT.render('Roll', 1,(0,0,0)),(120 + (80*7), 538))
     SCREEN.blit(TITLE_FONT.render('Roll The Dice', 1,(0,0,0)),(300, 10))
     pygame.display.update()
